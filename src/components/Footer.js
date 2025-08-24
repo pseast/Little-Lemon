@@ -1,11 +1,12 @@
 import React from 'react';
-export default function Footer() {
+import littleLemonLogo from '../logo.svg';
 
+export default function Footer() {
   return (
     <footer className="bg-[#495E57] text-white mt-12">
-      <div className="container mx-auto px-8 md:px-16 lg:px-32 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-8 md:px-16 lg:px-32 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-screen-xl">
         <div>
-          <img src="https://placehold.co/150x40/f4ce14/495e57?text=Little+Lemon" alt="Little Lemon Logo" className="h-10 mb-4 rounded" />
+          <img src={littleLemonLogo} alt="Little Lemon Logo" className="h-12" />
         </div>
         <div>
           <h4 className="font-bold text-lg mb-4 text-[#F4CE14]">Navigation</h4>
@@ -35,8 +36,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center py-4 bg-gray-800 text-sm">
-        <p>&copy; 2025 Little Lemon. All rights reserved.</p>
+        <p>&copy; 2024 Little Lemon. All rights reserved.</p>
       </div>
     </footer>
   );
-}
+};

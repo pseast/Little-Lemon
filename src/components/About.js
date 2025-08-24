@@ -15,8 +15,8 @@ export default function AboutSection() {
         </div>
         <div className="flex justify-center md:justify-end">
           <img 
-            src="https://placehold.co/400x400/cccccc/333333?text=Chefs+Image" 
-            alt="Chefs in the kitchen" 
+            src="/restaurant chef B.jpg" 
+            alt="Chef in the kitchen" 
             className="rounded-lg shadow-lg w-full max-w-sm"
             onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/400x400/cccccc/333333?text=Image+Not+Found'; }}
           />

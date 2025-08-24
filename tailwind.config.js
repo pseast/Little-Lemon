@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'markazi': ['Markazi Text', 'serif'],
+        'karla': ['Karla', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }

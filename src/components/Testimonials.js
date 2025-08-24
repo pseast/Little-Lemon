@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-export default function Testimonials() {
+
+export default function TestimonialsSection() {
     const [summary, setSummary] = useState('');
     const [isLoadingSummary, setIsLoadingSummary] = useState(false);
 
@@ -44,7 +45,6 @@ export default function Testimonials() {
         }
     };
 
-    // SVG component for the sparkles icon
     const SparklesIcon = () => (
         <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L9.5 8.5L3 11L9.5 13.5L12 20L14.5 13.5L21 11L14.5 8.5L12 2Z" />
@@ -69,7 +69,7 @@ export default function Testimonials() {
         ))}
       </div>
 
-      <div className="mt-8">
+      <div className="mt-8 flex justify-end">
         <button onClick={summarizeReviews} disabled={isLoadingSummary} className="bg-[#F4CE14] text-[#495E57] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300 disabled:bg-gray-400 inline-flex items-center justify-center">
            {isLoadingSummary ? 'Summarizing...' : (
                <>
@@ -88,4 +88,4 @@ export default function Testimonials() {
       )}
     </section>
   );
-}
+};

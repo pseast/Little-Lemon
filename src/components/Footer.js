@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center py-4 bg-gray-800 text-sm">
-        <p>&copy; 2024 Little Lemon. All rights reserved.</p>
+        <p>&copy; 2025 Little Lemon. All rights reserved.</p>
       </div>
     </footer>
   );

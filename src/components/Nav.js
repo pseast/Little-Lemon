@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import littleLemonLogo from '../Assets/Logo.svg';
+import littleLemonLogo from '../logo.svg';
 
 export default function Nav() {
   // State to manage whether the mobile menu is open or closed

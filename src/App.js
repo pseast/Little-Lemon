@@ -1,17 +1,19 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import './App.css'; 
+import ConfirmedBooking from './components/ConfirmedBooking';
 
-function App() {
+export default function App() {
   return (
     <>
       <Nav />
-      <Main />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
+      </Routes>
       <Footer />
     </>
   );
 }
-
-export default App;

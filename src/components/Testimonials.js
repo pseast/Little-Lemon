@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
             chatHistory.push({ role: "user", parts: [{ text: prompt }] });
             const payload = { contents: chatHistory };
             const apiKey = "" 
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
             const response = await fetch(apiUrl, {
                        method: 'POST',
                        headers: { 'Content-Type': 'application/json' },
@@ -59,18 +59,18 @@ export default function TestimonialsSection() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {testimonials.map((testimonial) => (
-            <div key={testimonial.name} className="bg-[#495E57] text-white p-6 rounded-lg shadow-lg">
+            <article key={testimonial.name} className="bg-[#495E57] text-white p-6 rounded-lg shadow-lg">
                 <div className="flex items-center mb-2">
                     <span className="text-yellow-400">{'★'.repeat(testimonial.rating)}{'☆'.repeat(5 - testimonial.rating)}</span>
                 </div>
                 <p className="font-semibold mb-2">{testimonial.name}</p>
                 <p className="text-gray-300 italic">"{testimonial.review}"</p>
-            </div>
+            </article>
         ))}
       </div>
 
       <div className="mt-8 flex justify-end">
-        <button onClick={summarizeReviews} disabled={isLoadingSummary} className="bg-[#F4CE14] text-[#495E57] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300 disabled:bg-gray-400 inline-flex items-center justify-center">
+        <button onClick={summarizeReviews} disabled={isLoadingSummary} className="bg-[#F4CE14] text-[#495E57] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300 disabled:bg-gray-400 inline-flex items-center justify-center" aria-label="On Click, summarize customer reviews">
            {isLoadingSummary ? 'Summarizing...' : (
                <>
                 <SparklesIcon />
